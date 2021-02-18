@@ -1,4 +1,4 @@
-ARG REPO=mcr.microsoft.com/dotnet/core
+ARG REPO=mcr.microsoft.com/dotnet
 FROM $REPO/aspnet:5.0-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
