@@ -4,7 +4,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM $REPO/sdk:5.0-buster AS build
+FROM $REPO/sdk:5.0-buster-slim AS build
 ENV BuildingDocker true
 WORKDIR /src
 COPY ["TechInfoLookUp.csproj", ""]
