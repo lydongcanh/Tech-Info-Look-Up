@@ -7,7 +7,7 @@ on:
 
 env:
   HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-  APP_NAME: ${{ 'tech-info-look-up' }}
+  APP_NAME: ${{ 'ittechinfo' }}
 
 jobs:
   build:
