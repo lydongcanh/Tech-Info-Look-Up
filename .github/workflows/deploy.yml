@@ -10,22 +10,19 @@ env:
   APP_NAME: ${{ 'ittechinfo' }}
 
 jobs:
+
   build:
-    name: Replace connection string
-    runs-on: ubuntu-latest
+    name: Deploy to Heroku
+    runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v2
+
+    # Setup heroku Postgres connection string
     - name: Find and Replace
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: "HEROKU_POSTGRES_CONNECTION_STRING"
         replace: ${{ secrets.HEROKU_POSTGRES_CONNECTION_STRING }}
         include: "appsettings.json"
-
-  build:
-    name: Deploy to Heroku
-    runs-on: ubuntu-18.04
-    steps:
 
     # Clone the repository
     - name: Checkout
