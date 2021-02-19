@@ -43,8 +43,8 @@ namespace TechInfoLookUp.Data.Repositories
         /// <param name="includeProperties">Navigation properties that should be included when loading data.</param>
         /// <returns>
         /// Return a tuple that contains pagination result.
-        /// - Item1: item list.
-        /// - Item2: total values.
+        /// <para>- Item1: item list.</para>
+        /// <para>- Item2: total values.</para>
         /// </returns>
         public virtual async Task<Tuple<IQueryable<TEntity>, int>> GetAsync(
             int skip = 0,
@@ -73,8 +73,8 @@ namespace TechInfoLookUp.Data.Repositories
         /// <param name="includeProperties">Navigation properties that should be included when loading data.</param>
         /// <returns>
         /// Return a tuple that contains pagination result.
-        /// - Item1: item list.
-        /// - Item2: total values.
+        /// <para>- Item1: item list.</para>
+        /// <para>- Item2: total values.</para>
         /// </returns>
         public virtual async Task<Tuple<IQueryable<TEntity>, int>> QueryAsync(
             Expression<Func<TEntity, bool>> predicate,

@@ -4,6 +4,8 @@ namespace TechInfoLookUp.Data.Entities
 {
     /// <summary>
     /// <seealso cref="Entities.Tag"/> and <seealso cref="Entities.Tech"/> many to many relational class.
+    /// <para>- Id.Item1: <seealso cref="TechId"/></para>
+    /// <para>- Id.Item2: <seealso cref="TagId"/></para>
     /// </summary>
     public class TechTag : IIdObject<Tuple<int, int>>
     {

@@ -32,6 +32,8 @@
     <Folder Include="Data\Repositories\" />
     <Folder Include="Data\Configurations\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Controllers\API\" />
+    <Folder Include="Data\API\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

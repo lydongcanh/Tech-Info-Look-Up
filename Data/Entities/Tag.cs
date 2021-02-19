@@ -5,6 +5,7 @@ namespace TechInfoLookUp.Data.Entities
     /// <summary>
     /// Ex: Framework, programming languages,...
     /// </summary>
+    /// TODO: Rename this to Type or something cleaner...
     public class Tag : IIdObject<int>
     {
         public int Id { get; set; }

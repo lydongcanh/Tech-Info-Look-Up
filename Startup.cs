@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using TechInfoLookUp.Data;
+using TechInfoLookUp.Data.Entities;
+using TechInfoLookUp.Data.Repositories;
 
 namespace TechInfoLookUp
 {
@@ -26,6 +29,10 @@ namespace TechInfoLookUp
 
             services.AddDbContext<TechInfoDbContext>(
                 options => options.UseNpgsql(Configuration.GetConnectionString("HerokuPostgres")));
+
+            services.AddScoped<IAsyncRepository<Tag, int>, TagRepository>();
+            services.AddScoped<IAsyncRepository<Tech, int>, TechRepository>();
+            services.AddScoped<IAsyncRepository<TechTag, Tuple<int, int>>, TechTagRepository>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
