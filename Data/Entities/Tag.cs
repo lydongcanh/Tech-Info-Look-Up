@@ -2,7 +2,7 @@
 
 namespace TechInfoLookUp.Data.Entities
 {
-    public class Tag
+    public class Tag : IIdObject<int>
     {
         public int Id { get; set; }
 
