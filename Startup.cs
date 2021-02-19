@@ -32,7 +32,6 @@ namespace TechInfoLookUp
 
             services.AddScoped<IAsyncRepository<Tag, int>, TagRepository>();
             services.AddScoped<IAsyncRepository<Tech, int>, TechRepository>();
-            services.AddScoped<IAsyncRepository<TechTag, Tuple<int, int>>, TechTagRepository>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

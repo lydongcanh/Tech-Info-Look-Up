@@ -9,9 +9,9 @@ namespace TechInfoLookUp.Data.Configurations
         {
             builder.Property(s => s.Id).ValueGeneratedOnAdd();
 
-            builder.HasMany(t => t.TechTags)
-                   .WithOne(tt => tt.Tag)
-                   .HasForeignKey(ttt => ttt.TagId);
+            builder.HasMany(t => t.Techs)
+                   .WithOne(t => t.Tag)
+                   .HasForeignKey(tt => tt.TagId);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace TechInfoLookUp.Data
     public class TechInfoDbContext : DbContext
     {
         public DbSet<Tag> Tags { get; private set; }
+        public DbSet<Tech> Techs { get; private set; }
 
         public TechInfoDbContext(DbContextOptions<TechInfoDbContext> options): base(options) { }
 
@@ -17,7 +18,6 @@ namespace TechInfoLookUp.Data
 
             new TagConfiguration().Config(modelBuilder.Entity<Tag>());
             new TechConfiguration().Config(modelBuilder.Entity<Tech>());
-            new TechTagConfiguration().Config(modelBuilder.Entity<TechTag>());
         }
     }
 }

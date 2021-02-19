@@ -21,6 +21,7 @@ namespace TechInfoLookUp.Data.Entities
         /// </summary>
         public string Info { get; set; }
 
-        public IEnumerable<TechTag> TechTags { get; set; }
+        public int TagId { get; set; }
+        public Tag Tag { get; set; }
     }
 }
