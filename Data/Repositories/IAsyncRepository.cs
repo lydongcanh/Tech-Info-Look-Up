@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace TechInfoLookUp.Data.Repositories
@@ -29,7 +28,7 @@ namespace TechInfoLookUp.Data.Repositories
         /// <param name="take">Number of elements that will be taken (default is 50).</param>
         /// <param name="includeProperties">Navigation properties that should be included when loading data.</param>
         /// <returns>
-        /// Return a tupple that contains pagination result.
+        /// Return a tuple that contains pagination result.
         /// - Item1: item list.
         /// - Item2: total values.
         /// </returns>
@@ -47,7 +46,7 @@ namespace TechInfoLookUp.Data.Repositories
         /// <param name="take">Number of elements that will be taken (default is 50).</param>
         /// <param name="includeProperties">Navigation properties that should be included when loading data.</param>
         /// <returns>
-        /// Return a tupple that contains pagination result.
+        /// Return a tuple that contains pagination result.
         /// - Item1: item list.
         /// - Item2: total values.
         /// </returns>

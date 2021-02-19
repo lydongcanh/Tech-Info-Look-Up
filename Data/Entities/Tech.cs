@@ -3,16 +3,21 @@
 namespace TechInfoLookUp.Data.Entities
 {
     /// <summary>
-    /// Ex: Framework, programming languages,...
+    /// Ex: ASP.NET, C#, React, Javascript,...
     /// </summary>
-    public class Tag : IIdObject<int>
+    public class Tech : IIdObject<int>
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
         /// <summary>
-        /// Long (HTML) detailed info.
+        /// Short description.
+        /// </summary>
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Long (HTML) detailed infomation.
         /// </summary>
         public string Info { get; set; }
 
